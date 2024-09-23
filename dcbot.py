@@ -31,7 +31,7 @@ async def on_message(message):
         await message.channel.send(wowoa.gen_pass(10))
     elif message.content.startswith("$para"):
         await message.channel.send(bot_mantik.yazi_tura())
-    elif message.content.startswith("$emo"):
+    elif message.content.startswith('$smile'):
         await message.channel.send(bot_mantik.emoji_olusturucu())
     else:
         await message.channel.send(message.content)
