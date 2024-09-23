@@ -1,4 +1,5 @@
 import discord
+import bot_mantik
 import wowoa
 
 # ayricaliklar (intents) değişkeni botun ayrıcalıklarını depolayacak
@@ -28,6 +29,10 @@ async def on_message(message):
         await message.channel.send("ne güzel")
     elif message.content.startswith("$şifre"):
         await message.channel.send(wowoa.gen_pass(10))
+    elif message.content.startswith("$para"):
+        await message.channel.send(bot_mantik.yazi_tura())
+    elif message.content.startswith("$emo"):
+        await message.channel.send(bot_mantik.emoji_olusturucu())
     else:
         await message.channel.send(message.content)
 
